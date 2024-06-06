@@ -174,14 +174,12 @@ def main_page(user):
     add_image = ImageTk.PhotoImage(add_image)
     Button(music_manipulation_frame, image=add_image, command=add_music).grid(row=0, column=5)
 
-    # Add volume slider
     volume_frame = Frame(main_page_root)
     volume_frame.pack(pady=20)
     volume_slider = Scale(volume_frame, from_=0, to=100, orient=HORIZONTAL, command=set_volume)
-    volume_slider.set(50)  # Set default volume to 50%
+    volume_slider.set(50)  
     volume_slider.pack()
 
-    # Add shuffle label and button
     shuffle_frame = Frame(main_page_root)
     shuffle_frame.pack(pady=20)
     shuffle_label = Label(shuffle_frame, text="Shuffle: OFF")
